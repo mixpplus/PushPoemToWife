@@ -6,6 +6,9 @@ on:
 jobs:
   PushServerChan:
     runs-on: ubuntu-latest
+    env:
+     MYURL: ${{ secrets.SERVERCHAN_MY_SEND_URL }}
+     WIFEURL: ${{ secrets.SERVERCHAN_WIFE_SEND_URL }}
     steps:
       - name: checkout
         uses: actions/checkout@v3
