@@ -35,15 +35,17 @@ def resolve_json():
 
 def send(content):
     
-    url = os.environ.get("SERVERCHAN_MY_SEND_URL")
-    wifeUrl = os.environ.get("SERVERCHAN_WIFE_SEND_URL")
-    print(os.environ)
+    # url = os.environ.get("SERVERCHAN_MY_SEND_URL")
+    # wifeUrl = os.environ.get("SERVERCHAN_WIFE_SEND_URL")
     # jsonData = {"title":"您最爱的老公常先生向您问好❤❤❤：", "desp":content,"channel":1}  # channel=1 企业微信群机器人
     jsonData = {"title":"您最爱的老公常先生向您问好❤❤❤：", "desp":content,"channel":"9"}
     headers = {"content-type":"application/json"}
-    requests.post(url, json=jsonData,headers=headers)
+    requests.post(myUrl, json=jsonData,headers=headers)
     # requests.post(wifeUrl, json=jsonData,headers=headers)
   
 
 if __name__ == "__main__":
+    myUrl = sys.argv[1]
+    wifeUrl = sys.argv[2]
     resolve_json()
+    

@@ -24,4 +24,4 @@ jobs:
 
       - name: Send poem
         run:  |
-          python resolve.py
+          python resolve.py $MYURL $WIFEURL
