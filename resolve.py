@@ -41,7 +41,7 @@ def send(content):
     jsonData = {"title":"您最爱的老公常先生向您问好❤❤❤：", "desp":content,"channel":"9"}
     headers = {"content-type":"application/json"}
     requests.post(myUrl, json=jsonData,headers=headers)
-    # requests.post(wifeUrl, json=jsonData,headers=headers)
+    requests.post(wifeUrl, json=jsonData,headers=headers)
   
 
 if __name__ == "__main__":
