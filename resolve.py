@@ -37,6 +37,7 @@ def send(content):
     
     url = os.environ.get("SERVERCHAN_MY_SEND_URL")
     wifeUrl = os.environ.get("SERVERCHAN_WIFE_SEND_URL")
+    print(os.environ)
     # jsonData = {"title":"您最爱的老公常先生向您问好❤❤❤：", "desp":content,"channel":1}  # channel=1 企业微信群机器人
     jsonData = {"title":"您最爱的老公常先生向您问好❤❤❤：", "desp":content,"channel":"9"}
     headers = {"content-type":"application/json"}

@@ -4,7 +4,7 @@ on:
       - master
 
 jobs:
-  PushServerChan:
+  PushPoemToWife:
     runs-on: ubuntu-latest
     env:
      MYURL: ${{ secrets.SERVERCHAN_MY_SEND_URL }}
